@@ -39,3 +39,11 @@ You'll have to run theses commands for changes to take effect
 or
 
 `rm -rf tmp/cache/assets/development/`
+
+You also can set in `config/initializers/rails_admin.rb`
+
+```ruby
+config.show_gravatar = false
+```
+
+to remove the avatar image in the dashboard (Is usually already in the file but commented)
