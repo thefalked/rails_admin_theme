@@ -11,6 +11,20 @@ html::-webkit-scrollbar-thumb {
   background-color: $secondary; 
 }
 
+body, .navbar-brand, .dropdown-header, .sub-menu a {
+  @media screen and (min-width: 767px) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 1023px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 16px;
+  }
+}
+
 body {
   color: $black;
   background: $background;
@@ -24,7 +38,6 @@ body.rails_admin .form-horizontal textarea {
 body.rails_admin .sidebar-nav .dropdown-header {
   color: $white;
   padding: 10px 15px;
-  font-size: 14px;
   line-height: 1.42857143;
   font-weight: normal;
   text-transform: inherit;
@@ -72,15 +85,16 @@ body.rails_admin .sidebar-nav > .nav-stacked > li > a {
 
     .hamburguer {
       position: relative;
-      width: 30px;
+      width: 70px;
       height: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-right: 15px;
-
+      margin-left: -15px;
+      padding: 25px 0;
+  
       span {
-        width: 100%;
+        width: 30px;
         height: 2px;
         background-color: $white;
       }
@@ -88,15 +102,15 @@ body.rails_admin .sidebar-nav > .nav-stacked > li > a {
       &:after, &:before {
         content: "";
         position: absolute;
-        top: 0;
-        width: 100%;
+        top: 15px;
+        width: 30px;
         height: 2px;
         background-color: $white;
       }
 
       &:before {
         top: initial;
-        bottom: 0;
+        bottom: 15px;
       }
     }
 
@@ -336,7 +350,6 @@ a.navbar-brand {
 .sub-menu a {
   color: $white;
   padding: 10px 15px 10px 30px;
-  font-size: 14px;
   line-height: 1.42857143;
   font-weight: normal;
   text-transform: inherit;
@@ -598,5 +611,22 @@ td.carrierwave_type .img-thumbnail {
     .help-block {
       color: $white !important;
     }
+  }
+}
+
+#sidebar-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%;
+  bottom: 0;
+  height: 100vh;
+  z-index: 3;
+  background: rgba(0,0,0, 0.5);
+  transition: all ease-in-out 0.5s;
+  transform: translateX(-150%);
+
+  &.active {
+    transform: translateX(0);
   }
 }
