@@ -11,6 +11,13 @@ The JS is not needed to be added anymore, it has been fixed.
 
 It was set the sidebar for mobile devices but the theme is not responsive, but now it's better.
 
+### Desktop Image
+![Desktop Image](https://github.com/thefalked/rails_admin_theme/blob/master/images/desktop.png)
+
+### Mobile Images
+![Desktop Image](https://github.com/thefalked/rails_admin_theme/blob/master/images/mobile.png)
+![Desktop Image](https://github.com/thefalked/rails_admin_theme/blob/master/images/mobile-navbar.png)
+
 You can fork it and change `variables.scss` as you want !
 
 Gemfile
