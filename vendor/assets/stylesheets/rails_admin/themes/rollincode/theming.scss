@@ -402,11 +402,10 @@ h1 {
   text-decoration: none !important;
   padding: 8px 10px;
   border-radius: 2px;
-  color: $secondary;
   transition: all 0.25s ease-in-out;
 
   &:hover {
-    background: $black;
+    background: $secondary;
     color: $white;
   }
 }
