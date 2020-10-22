@@ -605,10 +605,14 @@ td.carrierwave_type .img-thumbnail {
 .wysihtml5_type {
   .well {
     background-color: $primary;
-    color: $white !important;
+    color: $white;
   
     .help-block {
       color: $white !important;
+    }
+
+    .bootstrap-wysihtml5ed {
+      color: $black !important;
     }
   }
 }
