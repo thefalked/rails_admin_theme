@@ -112,7 +112,7 @@ $(function () {
 
   // Sidebar Mobile
   $(".navbar-fixed-top > .container-fluid")
-  .prepend(`<div class="hamburguer"><span></span></div>`);
+  .prepend('<div class="hamburguer"><span></span></div>');
 
 
   $(".hamburguer").on("click", function () {
@@ -121,8 +121,7 @@ $(function () {
   });
 
   function sidebarOverlay() {
-    $("body > .container-fluid").append(`<div id="sidebar-overlay"></div>`);
-    // $("#sidebar-overlay").css("width", $(document).width()-$(".sidebar-nav").width());
+    $("body > .container-fluid").append('<div id="sidebar-overlay"></div>');
     $("#sidebar-overlay").css("top", $(".navbar-header").height());
 
     $("#sidebar-overlay").on("click", function () {
