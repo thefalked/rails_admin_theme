@@ -633,3 +633,7 @@ td.carrierwave_type .img-thumbnail {
     transform: translateX(0);
   }
 }
+
+form fieldset > .col-sm-10.controls {
+  display: none;
+}
