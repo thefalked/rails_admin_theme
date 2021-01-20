@@ -1,14 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
 
-html::-webkit-scrollbar {
-  width: 8px;
-  background-color: #F5F5F5;
+html, .sidebar-nav {
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+  }
 }
 
-html::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-  background-color: $secondary; 
+html, .sidebar-nav {
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: $secondary; 
+  }
 }
 
 body, .navbar-brand, .dropdown-header, .sub-menu a {
