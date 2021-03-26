@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
 
 html, .sidebar-nav {
   &::-webkit-scrollbar {
@@ -32,7 +32,7 @@ body, .navbar-brand, .dropdown-header, .sub-menu a {
 body {
   color: $black;
   background: $background;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 body.rails_admin .form-horizontal textarea {

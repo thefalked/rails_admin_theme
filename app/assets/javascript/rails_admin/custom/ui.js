@@ -1,11 +1,11 @@
-$(document).on('ready pjax:success', function() {
+$(document).on("ready pjax:success", function() {
   handleActiveNav();
 
   function handleActiveNav() {
-    $('.sub-menu').each(function () {
-      if ($(this).hasClass('active')) {
-        $(this).parent().prev().addClass('active');
-        $(this).parent().prev().addClass('open');
+    $(".sub-menu").each(function () {
+      if ($(this).hasClass("active")) {
+        $(this).parent().prev().addClass("active");
+        $(this).parent().prev().addClass("open");
         $(this).parent().slideDown();
       }
     });
@@ -13,46 +13,46 @@ $(document).on('ready pjax:success', function() {
 });
 
 $(function () {
-  $('.navbar-brand small').remove();
+  $(".navbar-brand small").remove();
 
-  var width = $('.sidebar-nav').width();
-  $('.navbar-header').width(width);
-  $('.navbar-brand').width(width - 30);
+  var width = $(".sidebar-nav").width();
+  $(".navbar-header").width(width);
+  $(".navbar-brand").width(width - 30);
 
   var array_menu = [];
   var lvl_1 = null;
   var count = 0;
 
-  $('.sidebar-nav li').each(function (index, item) {
-    if ($(item).hasClass('dropdown-header')) {
+  $(".sidebar-nav li").each(function (index, item) {
+    if ($(item).hasClass("dropdown-header")) {
       lvl_1 = count++;
       array_menu[lvl_1] = []
     } else {
-      $(item).addClass('sub-menu sub-menu-' + lvl_1);
+      $(item).addClass("sub-menu sub-menu-" + lvl_1);
     }
   });
 
   for (var i = 0; i <= array_menu.length; i++) {
-    $('.sub-menu-' + i).wrapAll("<div class='sub-menu-container' />");
+    $(".sub-menu-" + i).wrapAll("<div class='sub-menu-container' />");
   }
 
-  $('.sub-menu-container').hide();
+  $(".sub-menu-container").hide();
 
-  $('.sub-menu').on("click", function () {
-    $('.sub-menu').removeClass("active")
+  $(".sub-menu").on("click", function () {
+    $(".sub-menu").removeClass("active")
     $(this).addClass("active")
     $(".sub-menu-container").prev().removeClass("open")
     $(this).parents(".sub-menu-container").prev().addClass("open");
   });
 
-  $('.dropdown-header').on('click', function () {
-    $('.dropdown-header').removeClass('open');
-    $(this).addClass('open');
+  $(".dropdown-header").on("click", function () {
+    $(".dropdown-header").removeClass("open");
+    $(this).addClass("open");
 
-    $('.dropdown-header').removeClass('active');
-    $('.sub-menu-container').stop().slideUp();
-    $(this).toggleClass('active');
-    $(this).next('.sub-menu-container').stop().slideDown();
+    $(".dropdown-header").removeClass("active");
+    $(".sub-menu-container").stop().slideUp();
+    $(this).toggleClass("active");
+    $(this).next(".sub-menu-container").stop().slideDown();
   });
 
   // Sidebar Mobile
