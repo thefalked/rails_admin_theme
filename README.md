@@ -48,7 +48,7 @@ config.show_gravatar = false
 
 to remove the avatar image in the dashboard (Is usually already in the file but commented)
 
-In case the JS file in the theme dosn't work set in `app/assets/javascripts/rails_admin/custom/ui.js`
+In case the JS file in the theme dosn't work set/create the file in `app/assets/javascripts/rails_admin/custom/ui.js`
 
 If you already have stuff in this document, just put in the end
 
